@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <button onclick="vistid()">Sjekk inn</button>
+    <div id="resultat"></div>
+    <script>    
+        function vistid() {
+            const date = new Date();
+            let hour = date.getHours();
+
+            if (hour < 10) {
+                document.getElementById("resultat").textContent = "Hei, God morgen!";
+            } else if (hour < 13) {
+                document.getElementById("resultat").textContent = "Hei, god formiddag!";
+            } else {
+                document.getElementById("resultat").textContent = "Hei, god ettermiddag!";
+            }
+        }
+    </script>
+</body>
+</html>
