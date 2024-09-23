@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Kast terningene!</h1>
+    <h2>Her er kombinasjonene:</h2>
+    <p>* d1+d2 er mer enn d3+d4</p>
+
+    <button id="1">Roll 1</button>
+    <button id="2">Roll 2</button>
+    <button id="3">Roll 3</button>
+    <button id="4">Roll 4</button>
+    <button id="5">Roll 5</button>
+
+    <div id="resultat1"></div>
+    <div id="resultat2"></div>
+    <div id="resultat3"></div>
+    <div id="resultat4"></div>
+    <div id="resultat5"></div>
+
+    <div id="funker"></div>
+
+    
+        <script>
+            let dice1, dice2, dice3, dice4, dice5;
+
+        document.getElementById("1").addEventListener('click', function() {
+            dice1 = Math.floor(Math.random() * 4) + 1;
+            document.getElementById("resultat1").innerHTML = "D4: " + dice1;
+
+            sjekkResultat()
+        })
+
+        document.getElementById("2").addEventListener('click', function() {
+            dice2 = Math.floor(Math.random() * 6) + 1;
+            document.getElementById("resultat2").innerHTML = "D6: " + dice2;
+
+            sjekkResultat()
+        })
+
+        document.getElementById("3").addEventListener('click', function() {
+            dice3 = Math.floor(Math.random() * 8) + 1;
+            document.getElementById("resultat3").innerHTML = "D8: " + dice3;
+
+            sjekkResultat()
+        })
+
+        document.getElementById("4").addEventListener('click', function() {
+            dice4 = Math.floor(Math.random() * 12) + 1;
+            document.getElementById("resultat4").innerHTML = "D12: " + dice4;
+
+            sjekkResultat()
+        })
+
+        document.getElementById("5").addEventListener('click', function() {
+            dice5 = Math.floor(Math.random() * 16) + 1;
+            document.getElementById("resultat5").innerHTML = "D16: " + dice5;
+
+            sjekkResultat()
+        })
+
+        function sjekkResultat() {
+            let EnOgTo = dice1 + dice2;
+            let treOgFire = dice3 + dice4;
+
+            if (EnOgTo >= treOgFire) {
+                document.getElementById("funker").innerHTML = "Dine første to tall er høyere enn terning 3 og 4! SPECIAL CRIT";
+            }
+        }
+        </script>
+</body>
+</html>
