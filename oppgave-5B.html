@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+
+
+            function differanse()
+            {
+
+                let en = parseInt(prompt("Skriv inn første tall: "));
+                let to = parseInt(prompt("Skriv inn andre tallet: "));
+                
+                if (isNaN(en) || isNaN(to)) {
+                    document.write("SKriv inn gyldig tall")
+                }
+                else if (en !== to) {
+                    document.write("Differansen er " + (en - to));
+                }
+                else {
+                    document.write("Ingen differanse")
+                }
+
+                
+            }
+
+            differanse()
+     </script>
+</body>
+</html>
