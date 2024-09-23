@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oppgave-6</title>
+</head>
+<body>
+        <div id="resultat"></div>
+
+        <script>    
+            let tallArray = [];
+
+            for (i = 1; i <= 60; i++) { 
+                if (i % 2 === 0) { //Oppgave 6B: (i % 3 === 0)
+                    
+                    tallArray.push(i);
+                }
+            }
+
+        let resultatDiv = document.getElementById("resultat");
+        resultatDiv.innerHTML = tallArray.join(', ');
+        </script>
+</body>
+</html>
